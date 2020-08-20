@@ -5,6 +5,8 @@ budget_data = os.path.join("Resources", "budget_data.csv")
 
 net = []
 avrg = []
+great_increase = []
+great_decrease = []
 
 total = 0
 net_total = 0
@@ -25,12 +27,16 @@ with open(budget_data) as csv_file:
         avrg.append(row[1])
         average_change = (average_change + float(row[1])) / total
 
+        great_increase.append(row[1])
+        great_decrease.append(row[1])
+
 print("Financial Analysis")
-print(" ----------------------------")       
+print("----------------------------")       
 print(f"Total Months: {total}")
 print(f"Net Total: $ {net_total}")
 print(f"Average Change: $ {average_change}")
-# print(f"Greatest Increase in Profits: $ {}")
-print(" ----------------------------") 
+print(f"Greatest Increase in Profits: $ {max(great_increase)}")
+print(f"Greatest Decrease in Profits: $ {min(great_decrease)}")
+print("----------------------------") 
 
 
