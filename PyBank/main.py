@@ -30,6 +30,7 @@ with open(budget_data) as csv_file:
         great_increase.append(row[1])
         great_decrease.append(row[1])
 
+print("")
 print("Financial Analysis")
 print("----------------------------")       
 print(f"Total Months: {total}")
