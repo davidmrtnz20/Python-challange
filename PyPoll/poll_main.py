@@ -68,7 +68,7 @@ print(f"Winner: {candidate_winner}")
 print("-------------------------")
 
 import sys
-sys.stdout = open("Election Results text file", "w")
+sys.stdout = open("Election Results", "w")
 print("Election Results")
 print("-------------------------")
 print(f"Total number of votes cast: {total_num_votes}")
