@@ -37,6 +37,22 @@ with open(election_data) as csv_file:
 
             o_tooley_votes += 1
             votes_for_tooley = o_tooley_votes/total_num_votes
+    
+            if (khan_votes > correy_votes) and (khan_votes > li_votes) and (khan_votes > o_tooley_votes):
+
+                candidate_winner = "Kahn"
+            
+            elif (correy_votes > khan_votes) and (correy_votes > li_votes) and (correy_votes > o_tooley_votes):
+
+                candidate_winner = "Correy"
+
+            elif (li_votes > khan_votes) and (li_votes > correy_votes) and (li_votes > o_tooley_votes):
+
+                candidate_winner = "Lorrey"
+
+            else:
+
+                candidate_winner = "O'Tooley"
 
 print("")
 print("Election Results")
@@ -48,5 +64,19 @@ print("Correy: " "{0:.0%}".format(votes_for_correy) + " " + str(correy_votes))
 print("Li: " "{0:.0%}".format(votes_for_li) + " " + str(li_votes))
 print("O'Tooley: " "{0:.0%}".format(votes_for_tooley) + " " + str(o_tooley_votes))
 print("-------------------------")
-print("Winner: ")
+print(f"Winner: {candidate_winner}")
+print("-------------------------")
+
+import sys
+sys.stdout = open("Election Results text file", "w")
+print("Election Results")
+print("-------------------------")
+print(f"Total number of votes cast: {total_num_votes}")
+print("-------------------------")
+print("Khan: " "{0:.0%}".format(votes_for_khan) + " " + str(khan_votes))
+print("Correy: " "{0:.0%}".format(votes_for_correy) + " " + str(correy_votes))
+print("Li: " "{0:.0%}".format(votes_for_li) + " " + str(li_votes))
+print("O'Tooley: " "{0:.0%}".format(votes_for_tooley) + " " + str(o_tooley_votes))
+print("-------------------------")
+print(f"Winner: {candidate_winner}")
 print("-------------------------")
