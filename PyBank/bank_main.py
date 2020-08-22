@@ -41,7 +41,7 @@ print(f"Greatest Decrease in Profits: $ {min(great_decrease)}")
 print("----------------------------")
 
 import sys
-sys.stdout = open("Financial Analysis text file", "w")
+sys.stdout = open("Financial Analysis", "w")
 print("Financial Analysis")
 print("----------------------------")       
 print(f"Total Months: {total}")
