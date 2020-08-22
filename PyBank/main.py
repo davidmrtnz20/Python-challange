@@ -37,6 +37,17 @@ print(f"Net Total: $ {net_total}")
 print(f"Average Change: $ {average_change}")
 print(f"Greatest Increase in Profits: $ {max(great_increase)}")
 print(f"Greatest Decrease in Profits: $ {min(great_decrease)}")
-print("----------------------------") 
+print("----------------------------")
+
+import sys
+sys.stdout = open("Financial Analysis text file", "w")
+print("Financial Analysis")
+print("----------------------------")       
+print(f"Total Months: {total}")
+print(f"Net Total: $ {net_total}")
+print(f"Average Change: $ {average_change}")
+print(f"Greatest Increase in Profits: $ {max(great_increase)}")
+print(f"Greatest Decrease in Profits: $ {min(great_decrease)}")
+print("----------------------------")
 
 
