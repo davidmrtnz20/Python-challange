@@ -48,7 +48,7 @@ with open(election_data) as csv_file:
 
             elif (li_votes > khan_votes) and (li_votes > correy_votes) and (li_votes > o_tooley_votes):
 
-                candidate_winner = "Lorrey"
+                candidate_winner = "Li"
 
             else:
 
